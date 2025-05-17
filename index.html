@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Advanced To-Do List</h1>
+      <div class="theme-selector">
+        <label for="themeSelect">Theme:</label>
+        <select id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+    </header>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Add new task..." required />
+      <input type="date" id="dueDateInput" />
+      <select id="prioritySelect">
+        <option value="low">Low Priority</option>
+        <option value="medium" selected>Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search tasks..." />
+      <select id="sortSelect">
+        <option value="default">Sort By</option>
+        <option value="completed">Completed First</option>
+        <option value="pending">Pending First</option>
+        <option value="priority">High Priority First</option>
+        <option value="due">Due Date</option>
+      </select>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="progress-container">
+      <label>Progress:</label>
+      <progress id="progressBar" value="0" max="100"></progress>
+      <span id="progressPercent">0%</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
