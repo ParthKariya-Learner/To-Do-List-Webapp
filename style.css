@@ -1,0 +1,141 @@
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: var(--container-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+form, .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+form input[type="text"],
+input[type="date"],
+select,
+button,
+#searchInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+ul#taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.task {
+  display: flex;
+  flex-direction: column;
+  background: var(--task-bg);
+  border-left: 5px solid var(--priority-color);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+li.task.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-footer {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+progress {
+  flex: 1;
+}
+
+/* Themes */
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --container-bg: #ffffff;
+  --task-bg: #ffffff;
+  --accent-color: #007bff;
+  --accent-hover: #0056b3;
+  --priority-color: #888;
+}
+body.dark {
+  --bg-color: #1e1e2f;
+  --text-color: #ffffff;
+  --container-bg: #2a2a40;
+  --task-bg: #3b3b52;
+  --accent-color: #ff6b81;
+  --accent-hover: #ff4757;
+}
+body.blue {
+  --bg-color: #e7f0fd;
+  --text-color: #1b1b2f;
+  --container-bg: #ffffff;
+  --task-bg: #f0f4fa;
+  --accent-color: #2196f3;
+  --accent-hover: #1769aa;
+}
+body.green {
+  --bg-color: #e8f5e9;
+  --text-color: #2e7d32;
+  --container-bg: #ffffff;
+  --task-bg: #f1f8e9;
+  --accent-color: #43a047;
+  --accent-hover: #2e7d32;
+}
